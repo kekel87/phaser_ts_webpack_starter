@@ -8,6 +8,7 @@ var PATHS = {
     build: path.join(__dirname, 'public'),
     phaser: path.join(__dirname, 'node_modules', 'phaser', 'build', 'custom'),
     phaserDebug: path.join(__dirname, 'node_modules', 'phaser-debug', 'dist'),
+    phaserIso: path.join(__dirname, 'node_modules', 'phaser-plugin-isometric', 'dist'),
     p2: path.join(__dirname, 'node_modules', 'p2')
 };
 
@@ -29,7 +30,8 @@ module.exports = {
             phaser: path.join(PATHS.phaser, 'phaser-split.js'),
             pixi: path.join(PATHS.phaser, 'pixi.js'),
             p2: path.join(PATHS.p2, 'src', 'p2.js'),
-            'phaser-debug': path.join(PATHS.phaserDebug, 'phaser-debug.js')
+            'phaser-debug': path.join(PATHS.phaserDebug, 'phaser-debug.js'),
+            'phaser-isometric': path.join(PATHS.phaserIso, 'phaser-plugin-isometric.js')
         }
     },
     output: {

@@ -1,3 +1,5 @@
+import 'phaser-isometric';
+
 /**
  * The Loader state is responsible for preloading all the global assets needed for the game.
  */
@@ -13,6 +15,14 @@ class Loader extends Phaser.State {
 
         // Load the actual game assets
         this.load.image('phaser', 'images/phaser.png');
+        this.load.image('tile', 'assets/tile.png');
+
+        // Exemple iso
+        this.time.advancedTiming = true;
+
+        // this.game.plugins.add(Phaser.Plugin.Isometric);
+        this.game.plugins.add(new Phaser.Plugin.Isometric(this.game));
+        this.game.iso.anchor.setTo(0.5, 0.2);
     }
 
     public create(): void {
