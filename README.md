@@ -1,11 +1,9 @@
-# Yet Another Webpack, TypeScript & Phaser Starter
+# My Webpack, TypeScript & Phaser Starter Pack
 
->A fork of my [Webpack & Typescript Starter](https://github.com/hedlund/starter-ts-webpack) and my
-[Webpack & Phaser Starter](https://github.com/hedlund/starter-webpack-phaser).
 
 Including, but not limited to, the following:
 
-* `webpack` (d'oh)
+* `webpack`
 * `webpack-dev-server` for development & hot module reloading
 * `babel` for TypeScript transpiling, including stage 0 support
 * `tslint` for code hygiene
