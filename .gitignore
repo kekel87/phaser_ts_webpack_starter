@@ -1,6 +1,30 @@
-node_modules
-coverage
-.vscode
+# Logs
+logs
+*.log
+
+# Node Files #
+/node_modules
+/bower_components
 npm-debug.log
 
+# Coverage #
+coverage
+/coverage/
+
+# Typing #
+/src/typings/tsd/
+/typings/
+/tsd_typings/
+
+
+
+# Doc #
+/doc/
+
+# IDE #
+.idea/
+*.swp
+# .vscode/
+
+# Dist #
 public/app.js*
