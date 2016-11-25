@@ -3,6 +3,6 @@
     "module": "commonjs"
   },
   "files": [
-    "typings/main.d.ts"
+    "index.d.ts"
   ]
 }

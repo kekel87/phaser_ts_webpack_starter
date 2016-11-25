@@ -26,5 +26,3 @@ Including, but not limited to, the following:
 
 Hot Module Replacement doesn't really work with Phaser, so that isn't enabled by default when
 starting a dev server.
-
-/// <reference path="../node_modules/phaser/typescript/phaser.comments.d.ts" />
