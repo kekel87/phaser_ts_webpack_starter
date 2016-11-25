@@ -1,5 +1,3 @@
-/// <reference path="../node_modules/phaser/typescript/phaser.comments.d.ts" />
-
 import Boot from './states/Boot';
 import Loader from './states/Loader';
 import Main from './states/Main';
