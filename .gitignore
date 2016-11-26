@@ -11,13 +11,6 @@ npm-debug.log
 coverage
 /coverage/
 
-# Typing #
-/src/typings/tsd/
-/typings/
-/tsd_typings/
-
-
-
 # Doc #
 /doc/
 

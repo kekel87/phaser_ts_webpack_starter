@@ -8,6 +8,7 @@ class Loader extends Phaser.State {
     private loadbar: Phaser.Sprite;
 
     public preload(): void {
+
         // Setup the preloader sprite
         this.loadbar = this.add.sprite(this.world.centerX, this.world.centerY, 'loadbar');
         this.loadbar.anchor.set(0.5);
