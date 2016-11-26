@@ -20,8 +20,10 @@ class Loader extends Phaser.State {
         // Exemple iso
         this.time.advancedTiming = true;
 
-        // this.game.plugins.add(Phaser.Plugin.Isometric);
-        this.game.plugins.add(new Phaser.Plugin.Isometric(this.game));
+        /* tslint:disable:no-require-imports */
+        //const iso = require('phaser-isometric');
+        //this.add.plugin(iso);
+        new Phaser.Plugin.Isometric(this.game);
         this.game.iso.anchor.setTo(0.5, 0.2);
     }
 

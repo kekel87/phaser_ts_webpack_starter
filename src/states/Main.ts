@@ -30,27 +30,38 @@ class Main extends Phaser.State {
         // By default, the z position is 0 if not set.
         this.game.iso.unproject(this.game.input.activePointer.position, this.cursorPos);
 
+        // Voir si ça se fait ici ou pas ....
+        interface ISeletable {
+            selected: boolean;
+        }
+        interface IsoSpriteSeletable extends Phaser.Plugin.Isometric.IsoSprite, ISeletable {}
+
         // Loop through all tiles and test to see if the 3D position from above intersects with the automatically
         // generated IsoSprite tile bounds.
-        this.isoGroup.forEach((tile: Phaser.Plugin.Isometric.IsoSprite) => {
-            let inBounds = tile.isoBounds.containsXY(this.cursorPos.x, this.cursorPos.y);
-            // If it does, do a little animation and tint change.
-            if (!tile.selected && inBounds) {
-                tile.selected = true;
-                tile.tint = 0x86bfda;
-                this.game.add.tween(tile).to({ isoZ: 4 }, 200, Phaser.Easing.Quadratic.InOut, true);
-            }
-            // If not, revert back to how it was.
-            else if (tile.selected && !inBounds) {
-                tile.selected = false;
-                tile.tint = 0xffffff;
-                this.game.add.tween(tile).to({ isoZ: 0 }, 200, Phaser.Easing.Quadratic.InOut, true);
-            }
-        });
+        this.isoGroup.forEach(
+            (tile: IsoSpriteSeletable) => {
+                let inBounds = tile.isoBounds.containsXY(this.cursorPos.x, this.cursorPos.y);
+
+                // If it does, do a little animation and tint change.
+                if (!tile.selected && inBounds) {
+                    tile.selected = true;
+                    tile.tint = 0x86bfda;
+                    this.game.add.tween(tile).to({ isoZ: 4 }, 200, Phaser.Easing.Quadratic.InOut, true);
+                }
+                // If not, revert back to how it was.
+                else if (tile.selected && !inBounds) {
+                    tile.selected = false;
+                    tile.tint = 0xffffff;
+                    this.game.add.tween(tile).to({ isoZ: 0 }, 200, Phaser.Easing.Quadratic.InOut, true);
+                }
+            },
+            null
+        );
     }
 
     private spawnTiles(): void {
         let tile;
+
         for (let xx = 0; xx < 256; xx += 38) {
             for (let yy = 0; yy < 256; yy += 38) {
                 // Create a tile using the new game.add.isoSprite factory method at the specified position.
