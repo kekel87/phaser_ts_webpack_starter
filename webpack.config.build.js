@@ -1,13 +1,15 @@
 var webpack = require('webpack');
 var merge = require('webpack-merge');
 var config = require('./webpack.config');
+var failPlugin  = require('webpack-fail-plugin');
 
 if (process.env.NODE_ENV === 'development') {
 
     module.exports = merge(config, {
         devtool: 'source-map',
         plugins: [
-            new webpack.NoErrorsPlugin()
+            new webpack.NoErrorsPlugin(),
+            failPlugin
         ]
     });
     

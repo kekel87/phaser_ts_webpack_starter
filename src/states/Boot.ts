@@ -1,10 +1,12 @@
+import 'phaser-isometric';
+
 /**
  * The Boot state is responsible for preloading the loadbar, and then configure the global settings.
  */
 class Boot extends Phaser.State {
 
     public preload(): void {
-        this.load.image('loadbar', 'images/loadbar.png');
+        this.load.image('loadbar', 'assets/images/loadbar.png');
     }
 
     public create(): void {
@@ -34,6 +36,18 @@ class Boot extends Phaser.State {
             const debug = require('phaser-debug');
             this.add.plugin(debug);
         }
+
+        // Exemple iso
+        this.time.advancedTiming = true;
+        this.game.debug.renderShadow = false;
+        this.game.stage.disableVisibilityChange = true;
+
+        /* tslint:disable:no-require-imports */
+        //const iso = require('phaser-isometric');
+        //this.add.plugin(iso);
+        new Phaser.Plugin.Isometric(this.game);
+        this.game.iso.anchor.setTo(0.5, 0.2);
+        this.game.world.setBounds(0, 0, 2048, 2048);
 
         // Start the loader state
         this.game.state.start('loader');

@@ -1,15 +1,16 @@
-# My Webpack, TypeScript & Phaser Starter Pack
+# Webpack, TypeScript & Phaser Starter Pack
 
+With [phaser-isometric-demo](https://github.com/mmermerkaya/phaser-isometric-demo)
+ isometric demo in TypeScript.
 
 Including, but not limited to, the following:
 
 * `webpack`
 * `webpack-dev-server` for development & hot module reloading
-* `babel` for TypeScript transpiling, including stage 0 support
 * `tslint` for code hygiene
 * `phaser`, `pixi.js` and `p2` for the game engine
 * `phaser-debug` for improved debugging
-* `phaser-glsl-loader` to simplify shader loading
+* `phaser-isometric` for isometric perspective
 * `typings` for type definitions
 
 ## Usage
@@ -26,3 +27,18 @@ Including, but not limited to, the following:
 
 Hot Module Replacement doesn't really work with Phaser, so that isn't enabled by default when
 starting a dev server.
+
+## Update
+I fork and update definition files (.d.ts) of [lewster32/phaser-plugin-isometric](https://github.com/lewster32/phaser-plugin-isometric)
+
+See 
+[kekel87/phaser-plugin-isometric](https://github.com/kekel87/phaser-plugin-isometric)
+
+## Thanks
+[hedlund/starter-ts-webpack-phaser](https://github.com/hedlund/starter-ts-webpack-phaser)
+ for base project
+
+[mmermerkaya/phaser-isometric-demo](https://github.com/mmermerkaya/phaser-isometric-demo)
+ for sample
+
+[macbury/dungeon](https://github.com/macbury/dungeon)
