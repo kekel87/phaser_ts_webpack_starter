@@ -11,7 +11,8 @@ Including, but not limited to, the following:
 * `phaser`, `pixi.js` and `p2` for the game engine
 * `phaser-debug` for improved debugging
 * `phaser-isometric` for isometric perspective
-* `typings` for type definitions
+* `easystarjs` for Pathfinding 
+* `@types` for type definitions (node and easystarjs)
 
 ## Usage
 
@@ -34,11 +35,11 @@ I fork and update definition files (.d.ts) of [lewster32/phaser-plugin-isometric
 See 
 [kekel87/phaser-plugin-isometric](https://github.com/kekel87/phaser-plugin-isometric)
 
+## Trouble
+* `easystarjs@^0.3.X` i can not use it with TypeScript + Webpack ... back to `^0.2.3`
+* I can not import ressource like ES6 with TypeScript and WebPack
+
 ## Thanks
-[hedlund/starter-ts-webpack-phaser](https://github.com/hedlund/starter-ts-webpack-phaser)
- for base project
-
-[mmermerkaya/phaser-isometric-demo](https://github.com/mmermerkaya/phaser-isometric-demo)
- for sample
-
-[macbury/dungeon](https://github.com/macbury/dungeon)
+* [hedlund/starter-ts-webpack-phaser](https://github.com/hedlund/starter-ts-webpack-phaser)
+* [mmermerkaya/phaser-isometric-demo](https://github.com/mmermerkaya/phaser-isometric-demo)
+* [macbury/dungeon](https://github.com/macbury/dungeon)
